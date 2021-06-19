@@ -1,0 +1,16 @@
+
+
+
+
+Step 1: Break The UI Into A Component Hierarch
+
+
+-App
+ - CounterBox
+    - TotalCount
+    - Counter(s)
+
+
+Step 2: Build A Static Version in React
+
+    
