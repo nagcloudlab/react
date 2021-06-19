@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Greeting from "./components/lifecycle/Greeting";
+
 class GreetingApp extends Component {
   state = {
     message: "greetins",

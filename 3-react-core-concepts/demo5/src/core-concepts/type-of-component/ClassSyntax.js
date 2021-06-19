@@ -12,7 +12,7 @@ class ClassSyntax extends Component {
     return (
       <div className="card card-body">
         <div>
-          <span>class-syntax react component</span>
+          <span>class-syntax react-component</span>
         </div>
       </div>
     );

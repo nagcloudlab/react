@@ -6,7 +6,7 @@ function FunctionSyntax(props) {
   return (
     <div className="card card-body">
       <div>
-        <span>function-syntax react component</span>
+        <span>function-syntax react-component</span>
       </div>
     </div>
   );

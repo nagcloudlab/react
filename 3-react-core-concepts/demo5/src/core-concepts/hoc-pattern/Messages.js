@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import store from "../../store";
+import store from "./store";
 
 // dev-2
 class Messages extends Component {

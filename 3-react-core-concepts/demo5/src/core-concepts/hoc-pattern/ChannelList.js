@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import store from "../../store";
+import store from "./store";
 
 // dev-1
 class ChannelList extends Component {

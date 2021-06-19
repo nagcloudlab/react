@@ -1,5 +1,9 @@
 // import React, { Component } from "react";
 
+//----------------------------------------------------------------
+// class-syntax
+//----------------------------------------------------------------
+
 // class StatelessComp extends Component {
 //   render() {
 //     return (
@@ -12,6 +16,9 @@
 
 // export default StatelessComp;
 
+
+//----------------------------------------------------------------
+// function-syntax
 //----------------------------------------------------------------
 
 import React from "react";
