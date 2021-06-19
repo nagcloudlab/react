@@ -1,0 +1,13 @@
+
+
+code - reuse
+
+    => inheritance
+    => composition
+
+
+
+FP
+
+    => composition
+
