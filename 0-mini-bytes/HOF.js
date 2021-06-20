@@ -8,9 +8,13 @@ function hi() {
   //   console.log(":)");
 }
 
-function HelloReactComp() {
-  console.log("HelloReactComp");
-}
+hello();
+
+// withEmoji(hello)();
+const helloWithEmoji = withEmoji(hello);
+helloWithEmoji();
+
+withEmoji(hi)();
 
 // Higher-Order-Function ==> function composition
 function withEmoji(f) {
@@ -20,8 +24,37 @@ function withEmoji(f) {
   };
 }
 
-hello();
-withEmoji(hello)();
-withEmoji(hi)();
+//------------------------------------------------------------------------------
 
-withEmoji(HelloReactComp)();
+/*
+
+class HelloReactComp extends React.Component {
+  render() {
+    return <div>Hello </div>;
+  }
+}
+class HiReactComp extends React.Component {
+  render() {
+    return <div>Hi </div>;
+  }
+}
+
+// HOF
+function wrapWithEmoji(Comp) {
+  class WrapEmoji extends React.Component {
+    render() {
+      return (
+        <div>
+          <Comp /> <span>:)</span>
+        </div>
+      );
+    }
+  }
+
+  return WrapEmoji;
+}
+
+const HelloCompWithEmoji = wrapWithEmoji(HelloReactComp); // HOC
+const HiReactCompWithEmoji = wrapWithEmoji(HiReactComp);
+
+*/

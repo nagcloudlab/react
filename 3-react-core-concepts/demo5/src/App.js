@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 
-import Slack from './core-concepts/hoc-pattern/Slack';
+import Slack from "./core-concepts/hoc-pattern/Slack";
 
 class App extends Component {
   render() {
     return (
       <div className="container">
-        <hr/>
+        <hr />
         <div>react core concepts</div>
-        <hr/>
+        <hr />
         <Slack />
       </div>
     );

@@ -1,28 +1,14 @@
 import React, { Component } from "react";
-import store from "./store";
 
-// dev-1
+import { connect } from "./hof/react-store";
+
+// Presentational Component => how things look
 class ChannelList extends Component {
-  constructor(props) {
-    super();
-    this.state = {
-      channels: store.getState().channels,
-    };
-  }
-  componentDidMount() {
-    this.unsubcribe = store.subscribe(() => {
-      const channels = store.getState().channels;
-      this.setState({ channels: channels });
-    });
-  }
-  componentWillUnmount() {
-    this.unsubcribe();
-  }
   handleChannelSelect(e, channel) {
     this.props.onSelect(channel);
   }
   renderChannels() {
-    let { channels } = this.state;
+    let { channels } = this.props;
     let { currentChannel } = this.props;
     return channels.map((channel) => {
       let className = `list-group-item ${
@@ -54,4 +40,11 @@ class ChannelList extends Component {
   }
 }
 
-export default ChannelList;
+function mapStateToProps(state) {
+  return {
+    channels: state.channels,
+  };
+}
+
+const ChannelListContainer = connect(ChannelList, mapStateToProps);
+export default ChannelListContainer;

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ChannelList from "./ChannelList";
 import Messages from "./Messages";
+
 class Slack extends Component {
   state = {
     currentChannel: "",

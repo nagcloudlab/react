@@ -1,34 +1,11 @@
 import React, { Component } from "react";
 
-import store from "./store";
+import { connect } from "./hof/react-store";
 
 // dev-2
 class Messages extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      messages: store.getState().messages[props.currentChannel] || [],
-    };
-  }
-  componentDidMount() {
-    this.unsubcribe = store.subscribe(() => {
-      const messages =
-        store.getState().messages[this.props.currentChannel] || [];
-      this.setState({ messages });
-    });
-  }
-  componentWillUnmount() {
-    this.unsubcribe();
-  }
-  componentDidUpdate(prevProps) {
-    if (this.props.currentChannel !== prevProps.currentChannel) {
-      this.setState({
-        messages: store.getState().messages[this.props.currentChannel] || [],
-      });
-    }
-  }
   renderMessages() {
-    let { messages } = this.state;
+    let { messages } = this.props;
     return messages.map((message) => {
       return (
         <div className="alert alert-info">
@@ -42,4 +19,11 @@ class Messages extends Component {
   }
 }
 
-export default Messages;
+function mapStateToProps(state, props) {
+  const { currentChannel } = props;
+  return {
+    messages: state.messages[currentChannel] || [],
+  };
+}
+
+export default connect(Messages, mapStateToProps);

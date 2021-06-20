@@ -1,4 +1,4 @@
-// state management lib   ( redux )
+// state management lib   ( like redux lib )
 
 const state = {
   channels: ["channel-1", "channel-2", "channel-3"],
