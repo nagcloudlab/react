@@ -1,13 +1,17 @@
 import React, { Component } from "react";
-import WithCard from "./WithCard";
+import CardWrapper from "./CardWrapper";
 
 class Comp1 extends Component {
   render() {
     return (
-      <WithCard
+      <CardWrapper
         header="COMP1"
         body={() => {
-          return <>this is comp1</>;
+          return (
+            <>
+              <p>this is comp1</p>
+            </>
+          );
         }}
       />
     );

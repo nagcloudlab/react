@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class WithCard extends Component {
+class CardWrapper extends Component {
   render() {
     return (
       <div className="card">
