@@ -1,6 +1,7 @@
-import React from "react";
-
-function TodoInput({ dispatch }) {
+import React, { useContext } from "react";
+import TodoAppContext from "./TodoAppContext";
+function TodoInput({}) {
+  const { dispatch } = useContext(TodoAppContext);
   const handleChange = (e) => {
     if (e.nativeEvent.which !== 13) return;
     const title = e.target.value;

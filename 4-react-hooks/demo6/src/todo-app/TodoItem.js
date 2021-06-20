@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import TodoAppContext from "./TodoAppContext";
 
-function TodoItem({ todo, dispatch }) {
+function TodoItem({ todo }) {
+  const { dispatch } = useContext(TodoAppContext);
   return (
     <div className="d-flex justify-content-around">
       <input type="checkbox" onChange={(e) => {}} checked={todo.completed} />

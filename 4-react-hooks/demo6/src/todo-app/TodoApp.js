@@ -1,6 +1,7 @@
 import React, { useReducer } from "react";
 import TodoInput from "./TodoInput";
 import TodoList from "./TodoList";
+import TodoAppContext from "./TodoAppContext";
 
 const todosReducer = (state, action) => {
   switch (action.type) {
@@ -25,9 +26,11 @@ function TodoApp(props) {
 
   return (
     <div className="card card-body">
-      <TodoInput dispatch={dispatch} />
-      <div className="mb-3"></div>
-      <TodoList todos={todos} dispatch={dispatch} />
+      <TodoAppContext.Provider value={{ dispatch }}>
+        <TodoInput />
+        <div className="mb-3"></div>
+        <TodoList todos={todos} />
+      </TodoAppContext.Provider>
     </div>
   );
 }

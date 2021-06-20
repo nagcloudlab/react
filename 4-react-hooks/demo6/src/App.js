@@ -1,4 +1,4 @@
-import TodoApp from "./todo-app/TodoApp";
+import UseEffect from "./use-effect/UseEffect";
 
 function App() {
   return (
@@ -6,7 +6,7 @@ function App() {
       <hr />
       <div> react hooks</div>
       <hr />
-      <TodoApp />
+      <UseEffect />
     </div>
   );
 }
