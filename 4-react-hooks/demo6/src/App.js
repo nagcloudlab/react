@@ -1,4 +1,4 @@
-import BtnClass from "./components/BtnClass";
+import TodoApp from "./todo-app/TodoApp";
 
 function App() {
   return (
@@ -6,7 +6,7 @@ function App() {
       <hr />
       <div> react hooks</div>
       <hr />
-      <BtnClass />
+      <TodoApp />
     </div>
   );
 }
