@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Slack from "./core-concepts/hoc-pattern/Slack";
+import ContextApp from "./mini-bytes/context/ContextApp";
 
 class App extends Component {
   render() {
@@ -9,7 +9,7 @@ class App extends Component {
         <hr />
         <div>react core concepts</div>
         <hr />
-        <Slack />
+        <ContextApp />
       </div>
     );
   }
