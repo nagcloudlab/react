@@ -1,4 +1,4 @@
-import UseEffect from "./use-effect/UseEffect";
+import UseRef from "./use-ref/UseRef";
 
 function App() {
   return (
@@ -6,7 +6,7 @@ function App() {
       <hr />
       <div> react hooks</div>
       <hr />
-      <UseEffect />
+      <UseRef />
     </div>
   );
 }
