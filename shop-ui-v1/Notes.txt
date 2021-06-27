@@ -1,0 +1,45 @@
+
+
+steps while using state management lib
+---------------------------------------
+
+
+step-1 : know your UI appl's state/data/model
+
+e.g shop-ui
+
+        -> items
+        -> reviews
+        -> cart
+        -> current-user
+        -> loading-status
+        -> error
+        .......
+
+step-2 : identify sync | async action which cause state change
+
+        LOAD_ITEMS
+
+        LOAD_REVIEWS
+        ADD_NEW_REVIEW
+
+        BUY
+
+        LOGIN
+
+        REQUEST_BEGIN
+        REQUEST_SUCCESS
+
+        XXXX_ERROR
+
+step-3: define pure-function/reducers to make new-state based on action      
+        - itemsReducer
+        - reviewsReducer
+        - cartReducer
+        ....
+
+step-4 : combine/compose all reducers as rootReducer
+
+step-5 : create single-store with rootReducer + intial state
+
+
